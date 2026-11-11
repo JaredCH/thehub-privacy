@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TheHub Privacy Policy</title>
+<meta name="description" content="TheHub privacy policy. A private family hub with live location, shared calendars, and weather. Location is encrypted on your device; no email address, no ads, no analytics.">
+<meta name="robots" content="index, follow">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5c5c5c;
+    --rule: #e2e2e2;
+    --accent: #0b6bcb;
+    --code-bg: #f4f4f5;
+    --table-head: #f7f7f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181c;
+      --fg: #e8e8ea;
+      --muted: #a0a3a8;
+      --rule: #2c2f35;
+      --accent: #6cb0ff;
+      --code-bg: #22252b;
+      --table-head: #1d2026;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+  }
+  main {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 5rem;
+  }
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    margin: 0 0 1.75rem;
+    padding: 0 0 0.85rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.9rem;
+  }
+  .site-nav a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .site-nav a:hover,
+  .site-nav a[aria-current="page"] {
+    color: var(--fg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 2.5rem 0 0.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.02rem;
+    margin: 1.75rem 0 0.5rem;
+  }
+  p { margin: 0 0 1rem; }
+  ul, ol { margin: 0 0 1rem; padding-left: 1.4rem; }
+  li { margin-bottom: 0.35rem; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  strong { font-weight: 650; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+  code {
+    background: var(--code-bg);
+    padding: 0.12em 0.35em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1.25rem;
+    font-size: 0.94rem;
+    display: block;
+    overflow-x: auto;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th { background: var(--table-head); font-weight: 650; }
+  blockquote {
+    margin: 0 0 1rem;
+    padding: 0.1rem 0 0.1rem 1rem;
+    border-left: 3px solid var(--rule);
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+  @media (max-width: 480px) {
+    main { padding: 1.75rem 1rem 3rem; }
+    h1 { font-size: 1.55rem; }
+    table { font-size: 0.875rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+<nav class="site-nav">
+  <a href="index.html" aria-current="page">Privacy</a>
+  <a href="delete-account.html">Delete account</a>
+</nav>
+<h1>TheHub privacy policy</h1>
+<p><strong>Effective 11 November 2026 · Last updated 11 November 2026</strong></p>
+<p>TheHub is a private family app: a live location map, shared calendars, and a
+28-hour weather strip. This page explains what it does with your information.</p>
+<p>The hosted version of this page is the authoritative one. The same text is shown
+inside the app at <strong>Privacy</strong>, and it is the text the Google Play and Amazon
+Appstore listings point at.</p>
+<h2>The short version</h2>
+<ul>
+<li>You sign up with a username and a password. We never ask for an email address
+or a phone number.</li>
+<li>Your location is encrypted on your own device with a key your family holds. The
+server stores ciphertext it cannot read, and deletes it within four hours.</li>
+<li>No advertising, no analytics, no trackers, and nothing is ever sold.</li>
+</ul>
+<h2>What we collect and why</h2>
+<h3>Your account</h3>
+<p>A username, the display name and colour you choose, a password hash (Argon2id —
+we never store the password itself), and a random salt used by your browser to
+wrap your family keys. This is what lets you sign in and be recognised by your
+family.</p>
+<h3>Location, only while you turn it on</h3>
+<p>When you tap <strong>Share my location</strong>, your device sends a point at most every
+fifteen seconds while the app is open and visible. Each point is sealed with
+AES-256-GCM using your family&#39;s key before it leaves the device. We store the
+sealed payload plus the time, accuracy, battery percentage, and whether you were
+moving. We cannot decrypt any of it; the map in someone else&#39;s browser can,
+because they hold the same key.</p>
+<p>Location points are deleted from our database within four hours of being
+recorded. Turning sharing off stops new points immediately. Browser location
+sharing stops when the tab is closed, and the Android app stops when it is not in
+the foreground — the app does not track in the background and does not request
+background location permission.</p>
+<h3>Your family</h3>
+<p>Family name, timezone, who is a member, their role, and the invite codes that
+were used. Invite codes are stored only as a one-way hash plus the family key
+sealed with the invite secret.</p>
+<h3>Calendars</h3>
+<p>If you add a calendar feed, we store the URL encrypted and fetch it on your
+behalf. If you connect Google Calendar, Google gives us a read-only refresh
+token, which we store encrypted with a server key, and we copy event titles,
+times, and locations into our cache so the calendar opens quickly. Calendar
+content is not end-to-end encrypted: the server can read it in order to merge
+feeds. You can disconnect at any time, which revokes the token with Google.</p>
+<h3>Weather and maps</h3>
+<p>The weather strip asks Open-Meteo for a forecast using your position rounded to
+about 11 km; we store nothing from that request. Map tiles come from
+OpenStreetMap directly from your browser, so their servers see your IP address
+and the area you are looking at, as they would on any map website.</p>
+<h3>Security logs</h3>
+<p>Sessions record a hashed IP address, a browser user agent, and timestamps, and our
+server keeps ordinary request logs. We use these to keep accounts safe and to
+debug failures, not to profile anyone.</p>
+<h2>What we do not collect</h2>
+<p>No email address, no phone number, no contacts, no photos, no advertising
+identifier, no cross-site tracking, no analytics SDK, and no third-party
+advertising. There is no data broker on the other end of this service.</p>
+<h2>Who else touches your data</h2>
+<ul>
+<li><strong>Railway</strong> hosts the application and its PostgreSQL database. Their privacy
+policy: <a href="https://railway.com/legal/privacy">https://railway.com/legal/privacy</a>.</li>
+<li><strong>Google</strong> — only if you connect Google Calendar. Their privacy policy:
+<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>. We request the <code>calendar.readonly</code> scope
+and nothing else.</li>
+<li><strong>Open-Meteo</strong> — the weather forecast. Their privacy policy:
+<a href="https://open-meteo.com/en/terms">https://open-meteo.com/en/terms</a>.</li>
+<li><strong>OpenStreetMap</strong> tile servers — the map imagery. Their privacy policy:
+<a href="https://osmfoundation.org/wiki/Privacy_Policy">https://osmfoundation.org/wiki/Privacy_Policy</a>.</li>
+</ul>
+<p>We do not sell data, share it with advertisers, or use it to train anything.</p>
+<h2>Legal bases</h2>
+<p>Where the GDPR applies: we process account and family data because it is
+necessary to provide the service you asked for; security logs because we have a
+legitimate interest in keeping accounts safe; and location sharing and Google
+Calendar connections only with your consent, which you can withdraw at any time by
+turning the feature off.</p>
+<h2>How long we keep it</h2>
+<ul>
+<li>Location points: four hours.</li>
+<li>Calendar cache: until you remove the feed or the family.</li>
+<li>Account and family data: until you delete your account or leave the family.</li>
+<li>Server logs: about thirty days.</li>
+<li>Deleting your account removes your login, key backups, and location data
+immediately.</li>
+</ul>
+<h2>Security</h2>
+<p>Traffic is encrypted in transit. Location and calendar credentials are encrypted
+at rest with AES-256-GCM; family keys are derived with HKDF-SHA256 and never sent
+to the server; passwords are hashed with Argon2id; sessions are opaque random
+tokens, stored only as hashes. No system is perfect, but a database dump of TheHub
+does not contain anyone&#39;s location.</p>
+<h2>Your choices</h2>
+<ul>
+<li>Change your display name or colour at any time.</li>
+<li>Pause sharing, or leave a family, from the family page.</li>
+<li>Disconnect Google Calendar from the calendar panel.</li>
+<li>Delete your account in the app (Your families → Delete account) or request it
+at the <a href="delete-account.html">delete page</a>. Families you were the only member of
+are deleted; in a family with other members, ownership passes to the
+longest-standing member.</li>
+<li>Ask us for a copy of what we hold about you, or ask us to correct it, by
+writing to <a href="mailto:Hicksjaredc@gmail.com">Hicksjaredc@gmail.com</a>.</li>
+</ul>
+<h2>Children</h2>
+<p>TheHub is made for families, but an account holder must be at least 13 years old.
+We do not knowingly collect data from children under 13. If you believe a child
+under 13 has an account, write to us and we will remove it.</p>
+<h2>Changes</h2>
+<p>If this policy changes in a way that matters, we will show a notice in the app
+before the change takes effect. The date at the top always reflects the current
+version, and the new version is published at this same URL.</p>
+<h2>Contact</h2>
+<p>Questions, requests, or complaints: <a href="mailto:Hicksjaredc@gmail.com">Hicksjaredc@gmail.com</a>.</p>
+
+<footer>
+  <p>TheHub is a private family app. This page is referenced from the Google Play
+  and Amazon Appstore listings and from the app's own Privacy screen.</p>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "thehub-privacy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public privacy policy and account-deletion page for the TheHub Android app",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "marked": "^18.1.2"
+  }
+}
