@@ -26,7 +26,7 @@ it within seven days, and reply when it is done.
 ## What is deleted
 
 - Your username, display name, password hash, and colour.
-- Every location point still stored (never more than four hours of them).
+- Every raw location point (24 hours) and every encrypted trip summary (14 days) still stored.
 - Your key backups and sessions on every device.
 - Any connected Google Calendar token, revoked with Google.
 - Families where you were the only member, including their calendar feeds and

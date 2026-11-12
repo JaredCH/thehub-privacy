@@ -146,7 +146,9 @@ Appstore listings point at.</p>
 <li>You sign up with a username and a password. We never ask for an email address
 or a phone number.</li>
 <li>Your location is encrypted on your own device with a key your family holds. The
-server stores ciphertext it cannot read, and deletes it within four hours.</li>
+server stores ciphertext it cannot read, and deletes raw points within 24 hours.</li>
+<li>Trip summaries — where you drove, kept for 14 days — are encrypted the same way,
+are visible only to your family, and you can delete them at any time.</li>
 <li>No advertising, no analytics, no trackers, and nothing is ever sold.</li>
 </ul>
 <h2>What we collect and why</h2>
@@ -157,16 +159,23 @@ wrap your family keys. This is what lets you sign in and be recognised by your
 family.</p>
 <h3>Location, only while you turn it on</h3>
 <p>When you tap <strong>Share my location</strong>, your device sends a point at most every
-fifteen seconds while the app is open and visible. Each point is sealed with
-AES-256-GCM using your family&#39;s key before it leaves the device. We store the
-sealed payload plus the time, accuracy, battery percentage, and whether you were
-moving. We cannot decrypt any of it; the map in someone else&#39;s browser can,
+fifteen seconds while you are moving. Each point is sealed with AES-256-GCM using
+your family&#39;s key before it leaves the device. We store the sealed payload plus the
+time, accuracy, battery percentage, whether the device is charging, and whether you
+were moving. We cannot decrypt any of it; the map in someone else&#39;s browser can,
 because they hold the same key.</p>
-<p>Location points are deleted from our database within four hours of being
-recorded. Turning sharing off stops new points immediately. Browser location
-sharing stops when the tab is closed, and the Android app stops when it is not in
-the foreground — the app does not track in the background and does not request
-background location permission.</p>
+<p>Raw points are deleted from our database within <strong>24 hours</strong> of being recorded.
+Your device also builds a <strong>trip summary</strong> — the route, distance, and how long you
+drove, moved, idled, or charged — sealed with the same key and kept for <strong>14 days</strong>,
+so the family map can show the last two weeks. Everyone in the family can see those
+trips; that is the product, and the sharing screen says so before you start. You can
+delete your history at any time from the Locations card, or turn trip history off so
+new ones are not stored.</p>
+<p>Turning sharing off stops new points immediately. In a browser, sharing stops when the tab
+is closed or hidden. In the Android app, sharing keeps recording with the screen off — that
+is what makes the two-week history complete — with a notification on screen the whole time
+and a pause control. We still do not request background location permission: the service is
+foreground location access, not background access.</p>
 <h3>Your family</h3>
 <p>Family name, timezone, who is a member, their role, and the invite codes that
 were used. Invite codes are stored only as a one-way hash plus the family key
@@ -212,7 +221,8 @@ Calendar connections only with your consent, which you can withdraw at any time 
 turning the feature off.</p>
 <h2>How long we keep it</h2>
 <ul>
-<li>Location points: four hours.</li>
+<li>Raw location points: <strong>24 hours</strong>.</li>
+<li>Encrypted trip summaries (the 14-day history): <strong>14 days</strong>, deletable at any time.</li>
 <li>Calendar cache: until you remove the feed or the family.</li>
 <li>Account and family data: until you delete your account or leave the family.</li>
 <li>Server logs: about thirty days.</li>
@@ -229,6 +239,8 @@ does not contain anyone&#39;s location.</p>
 <ul>
 <li>Change your display name or colour at any time.</li>
 <li>Pause sharing, or leave a family, from the family page.</li>
+<li>Delete your trip history, or turn it off so new trips are not stored, from the
+Locations card.</li>
 <li>Disconnect Google Calendar from the calendar panel.</li>
 <li>Delete your account in the app (Your families → Delete account) or request it
 at the <a href="delete-account.html">delete page</a>. Families you were the only member of
@@ -241,6 +253,11 @@ writing to <a href="mailto:Hicksjaredc@gmail.com">Hicksjaredc@gmail.com</a>.</li
 <p>TheHub is made for families, but an account holder must be at least 13 years old.
 We do not knowingly collect data from children under 13. If you believe a child
 under 13 has an account, write to us and we will remove it.</p>
+<p>A parent or guardian may choose to install TheHub on a device used by their child,
+or to share that device&#39;s location with the family. That decision — and any consent
+required in your country for a child&#39;s location to be shared — is theirs, not ours.
+We do not advertise to anyone, we do not build profiles, and we do not use location
+for anything except showing it to your family.</p>
 <h2>Changes</h2>
 <p>If this policy changes in a way that matters, we will show a notice in the app
 before the change takes effect. The date at the top always reflects the current

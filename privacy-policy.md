@@ -14,7 +14,9 @@ Appstore listings point at.
 - You sign up with a username and a password. We never ask for an email address
   or a phone number.
 - Your location is encrypted on your own device with a key your family holds. The
-  server stores ciphertext it cannot read, and deletes it within four hours.
+  server stores ciphertext it cannot read, and deletes raw points within 24 hours.
+- Trip summaries — where you drove, kept for 14 days — are encrypted the same way,
+  are visible only to your family, and you can delete them at any time.
 - No advertising, no analytics, no trackers, and nothing is ever sold.
 
 ## What we collect and why
@@ -29,17 +31,25 @@ family.
 ### Location, only while you turn it on
 
 When you tap **Share my location**, your device sends a point at most every
-fifteen seconds while the app is open and visible. Each point is sealed with
-AES-256-GCM using your family's key before it leaves the device. We store the
-sealed payload plus the time, accuracy, battery percentage, and whether you were
-moving. We cannot decrypt any of it; the map in someone else's browser can,
+fifteen seconds while you are moving. Each point is sealed with AES-256-GCM using
+your family's key before it leaves the device. We store the sealed payload plus the
+time, accuracy, battery percentage, whether the device is charging, and whether you
+were moving. We cannot decrypt any of it; the map in someone else's browser can,
 because they hold the same key.
 
-Location points are deleted from our database within four hours of being
-recorded. Turning sharing off stops new points immediately. Browser location
-sharing stops when the tab is closed, and the Android app stops when it is not in
-the foreground — the app does not track in the background and does not request
-background location permission.
+Raw points are deleted from our database within **24 hours** of being recorded.
+Your device also builds a **trip summary** — the route, distance, and how long you
+drove, moved, idled, or charged — sealed with the same key and kept for **14 days**,
+so the family map can show the last two weeks. Everyone in the family can see those
+trips; that is the product, and the sharing screen says so before you start. You can
+delete your history at any time from the Locations card, or turn trip history off so
+new ones are not stored.
+
+Turning sharing off stops new points immediately. In a browser, sharing stops when the tab
+is closed or hidden. In the Android app, sharing keeps recording with the screen off — that
+is what makes the two-week history complete — with a notification on screen the whole time
+and a pause control. We still do not request background location permission: the service is
+foreground location access, not background access.
 
 ### Your family
 
@@ -99,7 +109,8 @@ turning the feature off.
 
 ## How long we keep it
 
-- Location points: four hours.
+- Raw location points: **24 hours**.
+- Encrypted trip summaries (the 14-day history): **14 days**, deletable at any time.
 - Calendar cache: until you remove the feed or the family.
 - Account and family data: until you delete your account or leave the family.
 - Server logs: about thirty days.
@@ -118,6 +129,8 @@ does not contain anyone's location.
 
 - Change your display name or colour at any time.
 - Pause sharing, or leave a family, from the family page.
+- Delete your trip history, or turn it off so new trips are not stored, from the
+  Locations card.
 - Disconnect Google Calendar from the calendar panel.
 - Delete your account in the app (Your families → Delete account) or request it
   at the [delete page](delete-account.html). Families you were the only member of
@@ -131,6 +144,12 @@ does not contain anyone's location.
 TheHub is made for families, but an account holder must be at least 13 years old.
 We do not knowingly collect data from children under 13. If you believe a child
 under 13 has an account, write to us and we will remove it.
+
+A parent or guardian may choose to install TheHub on a device used by their child,
+or to share that device's location with the family. That decision — and any consent
+required in your country for a child's location to be shared — is theirs, not ours.
+We do not advertise to anyone, we do not build profiles, and we do not use location
+for anything except showing it to your family.
 
 ## Changes
 
